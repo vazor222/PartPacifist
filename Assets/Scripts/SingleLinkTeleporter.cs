@@ -56,13 +56,20 @@ public class SingleLinkTeleporter : MonoBehaviour
 				Debug.Log ("Teleport time? other.gameObject:"+other.gameObject+" headCannon:"+headCannon);
 				if (other.gameObject == headCannon && facingMostlyForward (other.gameObject.transform.forward)) {
 					// teleport now!
-					Debug.Log ("Teleported! ....hopefully");
-					Debug.Log ("preTeleportPosistion when teleporting:" + preTeleportPosistion.transform.position);
-					Debug.Log ("myDestination when teleporting:" + myDestination.transform.position);
-					Vector3 offset = preTeleportPosistion.transform.position - headCannon.transform.position;
-					preTeleportPosistion.transform.position = myDestination.transform.position + offset; //OriginTransform.position = Pointer.SelectedPoint + offset;
-					Debug.Log ("myDestination after teleporting:" + myDestination.transform.position);
-					Debug.Log("preTeleportPosistion after teleporting:" +preTeleportPosistion.transform.position );
+					Debug.Log ("Teleported!");
+					//Debug.Log ("preTeleportPosistion when teleporting:" + preTeleportPosistion.transform.position);
+					//Debug.Log ("myDestination when teleporting:" + myDestination.transform.position);
+					float x = 0;
+					float y = .5f;
+					float z = 0f;
+					Vector3 offset = preTeleportPosistion.transform.position - headCannon.transform.position + new Vector3 (x, y, z);
+
+					//Vector3 detectorHeight = new Vector3 (0, 2.5, 0);
+					//This is done because the center of the detector is 2.5 units lower than the height of the player.
+
+					preTeleportPosistion.transform.position = myDestination.transform.position + offset ; //OriginTransform.position = Pointer.SelectedPoint + offset;
+					//Debug.Log ("myDestination after teleporting:" + myDestination.transform.position);
+					//Debug.Log("preTeleportPosistion after teleporting:" +preTeleportPosistion.transform.position );
 				} else
 					Debug.Log ("was not other or matching forward");
 				positionCheckStartTime = 0;
