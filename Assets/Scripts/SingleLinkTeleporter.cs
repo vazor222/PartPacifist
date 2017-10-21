@@ -59,7 +59,8 @@ public class SingleLinkTeleporter : MonoBehaviour
 					Debug.Log ("Teleported! ....hopefully");
 					Debug.Log ("preTeleportPosistion when teleporting:" + preTeleportPosistion.transform.position);
 					Debug.Log ("myDestination when teleporting:" + myDestination.transform.position);
-					preTeleportPosistion.transform.position = myDestination.transform.position; //OriginTransform.position = Pointer.SelectedPoint + offset;
+					Vector3 offset = headCannon.transform.position - preTeleportPosistion.transform.position;
+					preTeleportPosistion.transform.position = myDestination.transform.position + offset; //OriginTransform.position = Pointer.SelectedPoint + offset;
 					Debug.Log ("myDestination after teleporting:" + myDestination.transform.position);
 					Debug.Log("preTeleportPosistion after teleporting:" +preTeleportPosistion.transform.position );
 				} else
