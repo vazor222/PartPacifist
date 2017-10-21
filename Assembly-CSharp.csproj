@@ -47,9 +47,6 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\SingleLinkTeleporter.cs" />
-     <Compile Include="Assets\Scripts\controllerEvent.cs" />
-     <Compile Include="Assets\Scripts\grabbyPhysics.cs" />
-     <Compile Include="Assets\Scripts\vrHeadPosition.cs" />
      <Compile Include="Assets\SteamVR\Extras\SteamVR_GazeTracker.cs" />
      <Compile Include="Assets\SteamVR\Extras\SteamVR_LaserPointer.cs" />
      <Compile Include="Assets\SteamVR\Extras\SteamVR_Teleporter.cs" />
