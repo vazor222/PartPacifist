@@ -10,6 +10,7 @@ public class SingleLinkTeleporter : MonoBehaviour
 	public GameObject preTeleportPosistion;
 
 	private float positionCheckStartTime;
+	private AudioSource teleportSound;
 
 	// Use this for initialization
 	void Start()
@@ -60,6 +61,8 @@ public class SingleLinkTeleporter : MonoBehaviour
 				if (other.gameObject == headCannon && facingMostlyForward (other.gameObject.transform.forward)) {
 					// teleport now!
 					Debug.Log ("Teleported!");
+					teleportSound = this.GetComponent<AudioSource> ();
+					teleportSound.Play ();
 					//Debug.Log ("preTeleportPosistion when teleporting:" + preTeleportPosistion.transform.position);
 					//Debug.Log ("myDestination when teleporting:" + myDestination.transform.position);
 					float x = 0;

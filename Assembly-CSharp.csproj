@@ -46,7 +46,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\DetectGunFallEnding.cs" />
      <Compile Include="Assets\Scripts\EnableTeleporter.cs" />
+     <Compile Include="Assets\Scripts\PlayShotFired.cs" />
      <Compile Include="Assets\Scripts\SingleLinkTeleporter.cs" />
      <Compile Include="Assets\Scripts\cubeDetector.cs" />
      <Compile Include="Assets\Scripts\grabObject.cs" />
@@ -158,8 +160,6 @@
      <None Include="Assets\SteamVR\Resources\SteamVR_ClearAll.shader" />
      <None Include="Assets\SteamVR\InteractionSystem\Hints\Shaders\ControllerButtonHints.shader" />
      <None Include="Assets\SteamVR\InteractionSystem\Teleport\Shaders\Highlight.shader" />
-     <None Include="Assets\KajamansRoads\FileNamesDescription.txt" />
-     <None Include="Assets\KajamansRoads\Free\ReadMe.txt" />
      <None Include="Assets\SteamVR\Resources\SteamVR_SphericalProjection.shader" />
      <None Include="Assets\SteamVR\Resources\SteamVR_AlphaOut.shader" />
      <None Include="Assets\SteamVR\readme.txt" />

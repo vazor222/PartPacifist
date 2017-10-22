@@ -6,6 +6,7 @@ TagManager:
   tags:
   - FxTemporaire
   - projectile
+  - Gun
   layers:
   - Default
   - TransparentFX
