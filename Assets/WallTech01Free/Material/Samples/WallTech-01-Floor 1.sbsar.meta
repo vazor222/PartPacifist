@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: b154e9f0cdd18d248915325c0f80ad73
-timeCreated: 1508633950
+timeCreated: 1508648585
 licenseType: Free
 SubstanceImporter:
   serializedVersion: 5
@@ -12,7 +12,7 @@ SubstanceImporter:
     shader: {fileID: 45, guid: 0000000000000000f000000000000000, type: 0}
     shaderKeywords: _EMISSION _NORMALMAP _PARALLAXMAP
     renderQueue: -1
-    lightmapFlags: 5
+    lightmapFlags: 1
     inputs:
     - name: $outputsize
       value:

@@ -28,13 +28,16 @@ public class SingleLinkTeleporter : MonoBehaviour
 
 	void OnTriggerEnter(Collider other)
 	{
-		
+		if (!this.gameObject.activeSelf)
+			return;
 		teleportCheck(other);
 
 	}
 
 	void OnTriggerStay(Collider other)
 	{
+		if (!this.gameObject.activeSelf)
+			return;
 		teleportCheck(other);
 	}
 

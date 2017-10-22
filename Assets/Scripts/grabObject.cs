@@ -41,32 +41,33 @@ public class grabObject : MonoBehaviour {
 
 			interactingItem = closestItem;
 			closestItem = null;
-
 			if (interactingItem) {
 				if (controller.GetPressDown(gripSqueeze)){
 					interactingItem.OnGripPressDown(this);
 				}
 				if (controller.GetPressDown(triggerSqueeze)){
-					interactingItem.OnGripPressDown(this);
+					interactingItem.OnTriggerPressDown(this);
 				}	
 			}
 	}
-		if (controller.GetPressDown (triggerSqueeze) && interactingItem != null) {
+		if (controller.GetPressUp (triggerSqueeze) && interactingItem != null) {
 			interactingItem.OnTriggerPressUp (this);
 		}
-		if (controller.GetPressDown (gripSqueeze) && interactingItem != null) {
+		if (controller.GetPressUp (gripSqueeze) && interactingItem != null) {
 			interactingItem.OnGripPressUp (this);
 		}
 }
 	private void OnTriggerExit(Collider collider){
 		interactableObject collidedItem = collider.GetComponent<interactableObject>();
 		if (collidedItem) {
+			Debug.Log ("removing InteractableObject:" + collidedItem.name);
 			objectsHoveringOver.Remove (collidedItem);
 		}
 	}
 	private void OnTriggerEnter(Collider collider){
 		interactableObject collidedItem = collider.GetComponent<interactableObject>();
 		if (collidedItem) {
+			Debug.Log ("adding InteractableObject:" + collidedItem.name);
 			objectsHoveringOver.Add (collidedItem);
 		}
 	}
