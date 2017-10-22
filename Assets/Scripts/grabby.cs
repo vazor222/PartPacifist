@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class grabby : interactableObject {
 	public GameObject youLosePanel;
-
+	public GameObject objectToStopMusicOn;
 
 
 
@@ -63,6 +63,9 @@ public class grabby : interactableObject {
 
 	public override void OnGripPressDown(grabObject wand){
 		Debug.Log ("start gripping");
+		if (this.gameObject.tag == "Gun") {
+			objectToStopMusicOn.GetComponent<AudioSource>().Stop();
+		}
 		gotGrabbedDown (wand);
 	}
 
