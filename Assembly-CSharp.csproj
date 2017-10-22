@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\DetectGunFallEnding.cs" />
      <Compile Include="Assets\Scripts\EnableTeleporter.cs" />
+     <Compile Include="Assets\Scripts\PlayShotFired.cs" />
      <Compile Include="Assets\Scripts\SingleLinkTeleporter.cs" />
      <Compile Include="Assets\Scripts\cubeDetector.cs" />
      <Compile Include="Assets\Scripts\grabObject.cs" />

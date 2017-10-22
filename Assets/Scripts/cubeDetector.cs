@@ -5,6 +5,8 @@ using UnityEngine;
 public class cubeDetector : MonoBehaviour {
 	public EnableTeleporter blueTeleporter;
 	public bool ayeAmNeo;
+
+	private AudioSource blockDetectedSound;
 	// Use this for initialization
 	void Start () {
 		
@@ -17,6 +19,9 @@ public class cubeDetector : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other){
 		if (other.GetComponent<grabby>() != null){
+			blockDetectedSound = this.GetComponent<AudioSource> ();
+			blockDetectedSound.Play ();
+
 			blueTeleporter.cubePresent (ayeAmNeo);
 
 

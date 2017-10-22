@@ -5,6 +5,11 @@ using UnityEngine;
 public class grabby : interactableObject {
 	public GameObject youLosePanel;
 
+
+
+
+
+
 	protected Rigidbody rigidbody;
 	protected bool currentlyInteracting;
 	protected uint itemId;
@@ -21,7 +26,7 @@ public class grabby : interactableObject {
 	private Transform interactionPoint;
 
 	private bool cannotDropGun;
-
+	private AudioSource gunShot;
 
 	// Use this for initialization
 	void Start () {
@@ -69,6 +74,8 @@ public class grabby : interactableObject {
 	public override void OnTriggerPressDown(grabObject wand){
 		Debug.Log ("triggerPressDown tag:"+this.gameObject.tag );
 		if (this.gameObject.tag == "Gun") {
+			gunShot = this.GetComponent<AudioSource> ();
+			gunShot.Play ();
 			Debug.Log ("You lose!");
 			cannotDropGun = true;
 			if( youLosePanel )
