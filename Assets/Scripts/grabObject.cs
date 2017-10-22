@@ -37,7 +37,7 @@ public class grabObject : MonoBehaviour {
 					minDistance = distance;
 					closestItem = item;
 				}
-		}
+			}
 
 			interactingItem = closestItem;
 			closestItem = null;
@@ -49,7 +49,7 @@ public class grabObject : MonoBehaviour {
 					interactingItem.OnTriggerPressDown(this);
 				}	
 			}
-	}
+		}
 		if (controller.GetPressUp (triggerSqueeze) && interactingItem != null) {
 			interactingItem.OnTriggerPressUp (this);
 		}
